@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="title"><img src="images/logo.svg"/></div>
+    <div id="container">
+      <div id="billContainer" class="box">
+        <div id="billBox">
+          <label for="billInput">Bill</label>
+          <div class="inputBox">
+            <div id="dollarIcon"><img src="images/icon-dollar.svg" /></div>
+            <input type="number" id="billInput" placeholder="0"/>
+          </div>
+        </div>
+        <div id="tipBox">
+          <label>Select Tip %</label>
+          <div id="tipPerCent">
+            <div class="tip">5%</div>
+            <div class="tip">10%</div>
+            <div class="tip">15%</div>
+            <div class="tip">25%</div>
+            <div class="tip">50%</div>
+            <div class="tip custom inputBox"><input id="customInput" type="number" placeholder="Custom"></div>
+          </div>
+        </div>
+        <div id="peopleBox">
+          <p id="errorMessage">Cant't be zero</p>
+          <label for="peopleInput">Number os people</label>
+          <div class="inputBox">
+            <div id="peopleIcon"><img src="images/icon-person.svg" /></div>
+            <input type="number" id="peopleInput" placeholder="0"/>
+          </div>
+        </div>
+      </div>
+      <div id="showBill" class="box">
+        <div id="boxAmount">
+          <div>
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <div class="amount">
+            <div class="dollarIcon">$</div>
+            <p id="tipAmount" class="value">0.00</p>
+          </div>
+        </div>
+        <div id="boxTotal">
+          <div>
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <div class="amount">
+            <div class="dollarIcon">$</div>
+            <p id="totalAmount" class="value">0.00</p>
+          </div>
+        </div>
+        <button disabled="disabled" id="resetBttn" onclick="reset()">RESET</button>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/EricLamounier" target="_blank">Eric Lamounier</a>.
+  </div>
+  <script src="javascript/script.js"></script>
+</body>
+</html>
